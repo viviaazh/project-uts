@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login Form"
+        android:text="LOGIN FORM"
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -50,7 +50,8 @@
             android:id="@+id/txt_password"
             android:layout_width="380dp"
             android:layout_height="wrap_content"
-            android:hint="Password"/>
+            android:hint="Password"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

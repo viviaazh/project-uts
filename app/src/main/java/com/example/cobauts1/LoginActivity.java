@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(intent);
         }
         else {
-            Toast.makeText(this, "Usename ata password salah", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Usename atau password salah", Toast.LENGTH_SHORT).show();
         }
     }
 

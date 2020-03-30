@@ -5,13 +5,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.widget.Adapter;
 
 import com.example.cobauts1.adapter.LayananAdapter;
 import com.example.cobauts1.models.TeamLogo;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class LayananActivity extends AppCompatActivity {
     private ArrayList<TeamLogo> teams;

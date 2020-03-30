@@ -62,12 +62,12 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             SharedPreferences.Editor editor = preferences.edit();
-            editor.putString(phonenumber + password + "data", phonenumber + "/n" + fullname + address + confirmpassword);
-//            editor.putString("fullname", fullname);
-//            editor.putString("phonenumber", phonenumber);
-//            editor.putString("address", address);
-//            editor.putString("password", password);
-//            editor.putString("confirmpassword", confirmpassword);
+//            editor.putString(phonenumber + password + "data", phonenumber + "/n" + fullname + address + confirmpassword);
+            editor.putString("fullname", fullname);
+            editor.putString("phonenumber", phonenumber);
+            editor.putString("address", address);
+            editor.putString("password", password);
+            editor.putString("confirmpassword", confirmpassword);
             editor.commit();
 
             Intent intent = new Intent(this, LoginActivity.class);

@@ -47,6 +47,8 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     public void handleMember(View view) {
+        Intent intent = new Intent(this, MemberActivity.class);
+        startActivity(intent);
     }
 
     public void handleProfile(View view) {
