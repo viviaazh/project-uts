@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
     EditText fullnameInput, phonenumberInput, addressInput, passwordInput, confirmpasswordInput;
     Button register, cancel;
     SharedPreferences preferences;
+    public static final String FULLNAME_KEY = "fullname";
+    public static final String PHONE_KEY = "phonenumber";
+    public static final String ADDRESS_KEY = "address";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +66,9 @@ public class MainActivity extends AppCompatActivity {
         else{
             SharedPreferences.Editor editor = preferences.edit();
 //            editor.putString(phonenumber + password + "data", phonenumber + "/n" + fullname + address + confirmpassword);
-            editor.putString("fullname", fullname);
-            editor.putString("phonenumber", phonenumber);
-            editor.putString("address", address);
+            editor.putString(FULLNAME_KEY, fullname);
+            editor.putString(PHONE_KEY, phonenumber);
+            editor.putString(ADDRESS_KEY, address);
             editor.putString("password", password);
             editor.putString("confirmpassword", confirmpassword);
             editor.commit();

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3F6F8"
+    android:background="#CDECEF"
     tools:context=".MenuActivity">
 
     <ImageView
@@ -56,7 +56,7 @@
 
     <LinearLayout
         android:id="@+id/menu"
-        android:layout_width="360dp"
+        android:layout_width="wrap_content"
         android:layout_height="460dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="140dp"
@@ -70,16 +70,16 @@
 
 
         <LinearLayout
-            android:layout_width="341dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="70dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
                 android:layout_marginRight="50dp"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -99,7 +99,6 @@
                     android:textSize="22sp" />
 
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
@@ -123,53 +122,9 @@
 
             </LinearLayout>
 
-
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="100dp"
-            android:orientation="horizontal">
 
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="50dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-
-<!--                <ImageButton-->
-<!--                    android:layout_width="100dp"-->
-<!--                    android:layout_height="100dp"-->
-<!--                    android:layout_marginBottom="4dp"-->
-<!--                    android:onClick="handleProfile"-->
-<!--                    android:src="@drawable/profile" />-->
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Profile"
-                    android:textColor="#0E1843"
-                    android:textSize="22sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="50dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-
-            </LinearLayout>
-
-
-        </LinearLayout>
 
 
     </LinearLayout>

@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static com.example.cobauts1.MainActivity.PHONE_KEY;
+
 public class LoginActivity extends AppCompatActivity {
     EditText phonenumberInput;
     EditText passwordInput;
@@ -30,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
 
         preferences = getSharedPreferences("UserInfo", MODE_PRIVATE);
 
-        String registeredPhonenumber = preferences.getString("phonenumber", phonenumber);
+        String registeredPhonenumber = preferences.getString(PHONE_KEY, phonenumber);
         String registeredPassword = preferences.getString("password", password);
 
         if(phonenumber.equals(registeredPhonenumber) && password.equals(registeredPassword)){
