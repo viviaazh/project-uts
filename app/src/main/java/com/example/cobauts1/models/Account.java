@@ -10,10 +10,7 @@ public class Account {
         this.transactions = new ArrayList<>();
     }
 
-    public Account(List<Transaction> transactions){
-        this.transactions = transactions;
-        this.transactions = new ArrayList<>();
-    }
+
 
     public List<Transaction> getTransactions() {
         return transactions;

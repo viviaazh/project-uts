@@ -13,7 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SaveActivity"></activity>
-        <activity android:name=".ListOrderActivity" />
         <activity android:name=".JoinClassActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".LoginActivity" />

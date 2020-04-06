@@ -14,6 +14,10 @@ import com.example.cobauts1.models.Transaction;
 import java.util.List;
 
 public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.ViewHolder> {
+    public interface OnItemTransactionListener {
+        void onTransactionClicked(int index, Transaction item);
+    }
+
     private List<Transaction> items;
     private OnItemTransactionListener listener;
 
@@ -21,31 +25,31 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
         this.items = items;
         this.listener = listener;
     }
-
-    public void refresh(List<Transaction> items){
-        if (this.items.size() != 0){
-            this.items.clear();
-        }
-        this.items = items;
-        notifyDataSetChanged();
-    }
+//
+//    public void refresh(List<Transaction> items){
+//        if (this.items.size() != 0){
+//            this.items.clear();
+//        }
+//        this.items = items;
+//        notifyDataSetChanged();
+//    }
 
     @NonNull
     @Override
     public TransactionAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_join_class, parent,false));
-    }
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_join_class, parent, false);
+        return new ViewHolder(view);    }
 
     @Override
     public void onBindViewHolder(@NonNull TransactionAdapter.ViewHolder holder, int position) {
-        Transaction transaction = items.get(position);
-        holder.bind(position, transaction);
+        Transaction item = items.get(position);
+        holder.bind(position, item);
     }
 
     @Override
     public int getItemCount() {
 
-        return (items != null) ? items.size() : 0;
+        return items.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -69,7 +73,5 @@ public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.
             });
         }
     }
-    public interface OnItemTransactionListener {
-        void onTransactionClicked(int index, Transaction item);
-    }
+
 }

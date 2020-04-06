@@ -7,13 +7,13 @@ public class Transaction implements Parcelable {
     private String classSchedule;
     private String day;
 
-    public Transaction(){
-
-    }
-
     public Transaction( String classSchedule, String day) {
         this.classSchedule = classSchedule;
         this.day = day;
+    }
+
+    public Transaction() {
+
     }
 
     public String getClassSchedule() {
@@ -50,9 +50,9 @@ public class Transaction implements Parcelable {
 
     public static final Creator<Transaction> CREATOR = new Creator<Transaction>() {
         @Override
-        public Transaction createFromParcel(Parcel in) {
+        public Transaction createFromParcel(Parcel source) {
 
-            return new Transaction(in);
+            return new Transaction(source);
         }
 
         @Override

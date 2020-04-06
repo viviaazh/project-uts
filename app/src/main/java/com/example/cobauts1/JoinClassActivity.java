@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toolbar;
 
 import com.example.cobauts1.adapter.TransactionAdapter;
 import com.example.cobauts1.models.Account;
@@ -26,7 +27,6 @@ public class JoinClassActivity extends AppCompatActivity implements TransactionA
 
     private Account account;
     private TransactionAdapter adapter;
-    private Transaction transaction;
     private RecyclerView transactionView;
 //   TextView info;
     @Override
@@ -34,10 +34,14 @@ public class JoinClassActivity extends AppCompatActivity implements TransactionA
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join_class);
 
-        transactionView = findViewById(R.id.rv_transactions);
+
+        transactionView = findViewById(R.id.rv_transaction);
         account = Application.getAccount();
         adapter = new TransactionAdapter(account.getTransactions(), this);
+        transactionView.setAdapter(adapter);
 
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        transactionView.setLayoutManager(layoutManager);
 
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -64,17 +68,16 @@ public class JoinClassActivity extends AppCompatActivity implements TransactionA
                 adapter.notifyDataSetChanged();
             }
         };
-        transactionView.setAdapter(adapter);
-        transactionView.setLayoutManager(new LinearLayoutManager(this));
+
 
 
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleTouchCallback);
         itemTouchHelper.attachToRecyclerView(transactionView);
     }
 
-    public void onTransactionClicked(int index, Transaction transaction){
+    public void onTransactionClicked(int index, Transaction item){
         Intent intent = new Intent(this, SaveActivity.class);
-        intent.putExtra(TRANSACTION_KEY, transaction);
+        intent.putExtra(TRANSACTION_KEY, item);
         intent.putExtra(INDEX_KEY, index);
         startActivityForResult(intent, UPDATE_REQUEST);
     }

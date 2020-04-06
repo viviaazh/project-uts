@@ -28,32 +28,32 @@
         <!--            tools:text="Description of transactions"-->
         <!--            />-->
 
-        <LinearLayout
-            android:layout_width="0dp"
+    <LinearLayout
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text_classSch"
+            android:layout_width="325dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:gravity="left"
+            android:textColor="#1E1919"
+            android:textSize="14sp"
+            tools:text="Zumba"/>
 
-            <TextView
-                android:id="@+id/text_classSch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:textColor="#fff"
-                android:textSize="14sp"
-                tools:text="Zumba" />
-
-            <TextView
-                android:id="@+id/text_day"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textAlignment="textEnd"
-                tools:text="Selasa"
-                android:gravity="end" />
-        </LinearLayout>
-
-
+        <TextView
+            android:id="@+id/text_day"
+            android:layout_width="325dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#1E1919"
+            android:textSize="14sp"
+            android:gravity="left"
+            tools:text="Selasa" />
     </LinearLayout>
+    </LinearLayout>
+
 </androidx.cardview.widget.CardView>
